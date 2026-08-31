@@ -37,8 +37,4 @@ LVM corruption — all without stopping the application.
 - Diagnosing and recovering corrupted LVM metadata and filesystems
 - Verifying storage health with `pvs`, `vgs`, `lvs`, `df`
 
-## Resume line
 
-Managed production LVM storage end-to-end — performed zero-downtime disk
-migration with `pvmove`, live capacity expansion, and recovery from LVM
-metadata/filesystem corruption with no data loss.
