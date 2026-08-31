@@ -97,7 +97,7 @@ Confirm:
 - `lv_data` is healthy and still mounted at `/mnt/data`.
 - The application never lost access to its data.
 
-## Why this works (the key idea)
+## Why this works 
 
 `pvmove` operates at the LVM block layer, below the filesystem. The
 filesystem and the application never know the underlying disk changed.
