@@ -95,25 +95,12 @@ vgs
 lvs
 ```
 
-## Shortcut: extend using all free space in the VG
 
-Instead of picking a size, you can use all remaining free space:
-
-```bash
-lvextend -l +100%FREE /dev/vg_data/lv_data
-xfs_growfs /mnt/data
-```
-
-## Why this works (the key idea)
+## Why this works 
 
 `lvextend` only changes the size at the LVM layer — it is instant and
 safe. `xfs_growfs` / `resize2fs` then grow the filesystem live to fill
 that new space. Neither step needs the filesystem to be unmounted, so the
 application keeps running the whole time.
 
-## Important note
 
-- Growing storage is always safe and simple this way.
-- **Shrinking** is a different and riskier operation — XFS cannot be
-  shrunk at all, and ext4 needs the filesystem unmounted first. That is a
-  separate topic, not covered here.
