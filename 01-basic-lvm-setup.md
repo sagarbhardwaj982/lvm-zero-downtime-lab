@@ -3,7 +3,7 @@
 Before doing the disk swap, you must understand basic LVM. This file covers
 that.
 
-## What is LVM (simple words)
+## What is LVM 
 
 LVM (Logical Volume Manager) lets you combine disks into one pool and
 create flexible storage from that pool. You can grow, shrink, or move
@@ -58,13 +58,13 @@ Check it:
 lvs
 ```
 
-## Step 4: Format the Logical Volume
+## Step 4: Format the Logical Volume into a Filesystem
 
 ```bash
 mkfs.xfs /dev/vg_data/lv_data
 ```
 
-## Step 5: Mount it
+## Step 5: Mount it filesystem to directory
 
 ```bash
 mkdir /mnt/data
